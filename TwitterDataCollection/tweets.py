@@ -15,7 +15,8 @@ api = tweepy.API(auth,wait_on_rate_limit=True)
 csvFile = open('Army.csv', 'a')
 #Use csv Writer
 csvWriter = csv.writer(csvFile)
-
+###### we collect the data for hashtags #IndianArmy,#DigitalMarketing,#AsiaCup2018,#Amazon,#ICC,#VIVOIPL
+#### we need to pass the hashtag in below line individually so that we get the tweets collection.
 for tweet in tweepy.Cursor(api.search,q="#IndianArmy",count=1000,
                            lang="en",
                            since="2012-04-03").items():
